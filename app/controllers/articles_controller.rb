@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 
   def index
     if params[:query].present?
-      @articles = Article.where("title LIKE ?", "%#{params[:query]}%")
+      @articles = Article.where("title ILIKE ?", "%#{params[:query]}%")
 
       # Check if the query is complete before saving it
       SearchSaver.save_search(params[:query], request.remote_ip, @articles) if params[:complete_query] == 'true'
@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
     end
 
     # Trending articles instance
-    @trending_articles = Search.trending
+    @trending_articles = Search.displaying_trends
 
     # User recommendations instance
     @recommendations = Search.recommendations(request.remote_ip)
