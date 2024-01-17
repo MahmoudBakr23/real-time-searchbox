@@ -9,7 +9,6 @@
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Install](#install)
-  - [Run tests](#run-tests)
 - [🤝 Contributing](#contributing)
 - [🙏 Acknowledgements](#acknowledgements)
 
@@ -98,26 +97,6 @@ For the local server run:
 
 ```sh
 rails s
-```
-
-### Run tests
-
-To run tests, run the following command:
-
-```sh
-rails db:migrate RAILS_ENV=test
-```
-
-Then run the following command to see the trace of all the tests:
-
-```sh
-rspec --format documentation
-```
-
-Be aware that in order to run the tests using rspec, your installed rails bundler version should match the one in the Gemfile, if not, please use this command instead:
-
-```sh
-bundle exec rspec --format documentation
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
