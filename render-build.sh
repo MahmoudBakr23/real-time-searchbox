@@ -1,6 +1,6 @@
 set -o errexit
 
-npm install
+yarn install
 bundle install
 rails db:create
 rails db:migrate
