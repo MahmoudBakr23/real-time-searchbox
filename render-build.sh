@@ -4,5 +4,6 @@ npm install
 bundle install
 rails db:create
 rails db:migrate
-npm run build:css --watch
+bundle exec rake assets:precompile
+npm run build:css
 npm run build
